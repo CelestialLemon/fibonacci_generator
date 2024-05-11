@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="fib-generator">
+        <h1 id="fib-generator-header">Fibonacci Generator</h1>
+        <label for="n-fib-input">Enter Nth fibonacci number to generate: </label>
+        <input type="number" id="n-fib-input"/>
+        <button id="calculate-btn">Calculate</button>
+        <br/>
+        <label>Output: </label>
+        <p id="p-fib-number-output">null</p>
+        <label>Order of magnitude: </label>
+        <p id="p-order-of-mag">0 (10^)</p>
+        <label>Time taken: </label>
+        <p id="p-time-taken">0ms</p>
+    </div>
+    <div id="how-it-works-container">
+        <h3 id="how-it-works-header">How it works?</h3>
+        <p>When generating fibonacci numbers using normal data types we quickly run into their size limits</p>
+        <p>So we need to use a data type to represent the numbers that doesn't have size limitations. For this purpose strings are ideal as they practically don't have any size limit and are also easy to operate on. In fibonacci series all we do is add previous 2 numbers to generate a new one. This operation is easy to do on a string that represents a number with a custom add function. This function is similar to how we did addition as kids. Adding digits and keeping a carry forward. While nowhere near as efficient as the add operation on native numbers its still fast enough for our purposes.</p>
+        <p>Using this implementation we can easily generate very large fibonacci numbers. On my PC I was able to generate the 5000th number in under a second and generated even the 100000th number though it took a few minutes (It has more than 20000 digits).</p>
+        <p>This implementation does not save any of the results. It only keeps the last 2 numbers and keeps calculating the next so its not memory intensive. Only CPU intensive. I'm sure this could be optimized and implemented easily in something like C++ and made even faster without the restrictions of browser and JavaScript. You can use devtools to check the code.</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

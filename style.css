@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 2rem;
+}
+
+#fib-generator {
+    margin-bottom: 3rem;
+}
+
+#p-fib-number-output {
+    word-break: break-word;
+}
+
+#fib-generator-header {
+    font-size: 3rem;
+}
+
+#how-it-works-header {
+    font-size: 2rem;
+}
+
+label, p, #calculate-btn, input {
+    font-size: 1.5rem;
+}
